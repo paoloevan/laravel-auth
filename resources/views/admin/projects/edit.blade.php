@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<form action="{{route('admin.projects.store')}}" method="POST" class="mb-3 p-5">
+<form action="{{route('admin.projects.update', $project->id)}}" method="post" class="mb-3 p-5">
     @csrf
 
     @method('PUT')
