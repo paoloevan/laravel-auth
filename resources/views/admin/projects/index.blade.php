@@ -7,8 +7,13 @@
 
     <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
 
+        <div class="d-flex">
+            <h2>Projects</h2>
 
-        <h2>Projects</h2>
+            <a class="mx-3 bg-primary text-white btn" href="{{route('admin.projects.create')}}">+</a>
+
+        </div>
+
         <div class="table-responsive">
             <table class="table table-striped table-sm">
                 <thead>
@@ -26,7 +31,7 @@
                     <tr>
                         <td>{{$project->id}}</td>
                         <td>{{$project->title}}</td>
-                        <td>d{{$project->team}}ata</td>
+                        <td>{{$project->team}}</td>
                         <td>{{$project->duration}}</td>
                         <td>{{$project->description}}</td>
                         <td>
