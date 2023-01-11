@@ -10,16 +10,7 @@
 
         <form action="{{route('admin.projects.store')}}" method="POST" class="mb-3 p-5">
             @csrf
-
-            @if ($errors->any())
-            <div class="alert alert-danger">
-                <ul>
-                    @foreach ($errors->all() as $error)
-                    <li>{{ $error }}</li>
-                    @endforeach
-                </ul>
-            </div>
-            @endif
+            @include('admin.partials.error')
 
             <label for="title" class="form-label">Title</label>
             <small class="form-text text-muted ms-2">Required - Max 255 characters</small>

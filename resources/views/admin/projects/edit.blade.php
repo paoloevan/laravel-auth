@@ -10,15 +10,8 @@
         <h1 class="ms-5">Edit project "{{$project->title}}"</h1>
         <form action="{{route('admin.projects.update', $project->id)}}" method="post" class="mb-3 p-5">
             @csrf
-            @if ($errors->any())
-            <div class="alert alert-danger">
-                <ul>
-                    @foreach ($errors->all() as $error)
-                    <li>{{ $error }}</li>
-                    @endforeach
-                </ul>
-            </div>
-            @endif
+            @include('admin.partials.error')
+
 
             @method('PUT')
 
