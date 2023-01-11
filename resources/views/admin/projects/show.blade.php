@@ -1,12 +1,38 @@
 @extends('layouts.app')
 
 @section('content')
-<ul>
-    <li>{{$project->title}}</li>
-    <li>{{$project->team}}</li>
-    <li>{{$project->description}}</li>
-    <li>{{$project->duration}}</li>
 
+<div class="d-flex">
+    @include('admin.partials.navbar')
 
-</ul>
+    <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+
+        <h2 class="mb-5">Project "{{$project->title}}"</h2>
+
+        <div class="table-responsive">
+            <table class="table table-striped table-sm">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Title</th>
+                        <th scope="col">Team</th>
+                        <th scope="col">Duration</th>
+                        <th scope="col">Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <tr>
+                        <td>{{$project->id}}</td>
+                        <td>{{$project->title}}</td>
+                        <td>{{$project->team}}</td>
+                        <td>{{$project->duration}}</td>
+                        <td>{{$project->description}}</td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+    </main>
+</div>
 @endsection
