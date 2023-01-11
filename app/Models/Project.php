@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Project extends Model
 {
-    protected $fillable = ['title', 'team', 'description', 'duration'];
+    protected $fillable = ['title', 'team', 'duration', 'description'];
 
     use HasFactory;
 }
