@@ -23,6 +23,7 @@ class ProjectSeeder extends Seeder
             $project->team = $faker->word();
             $project->duration = $faker->randomDigit();
             $project->description = $faker->sentence(50);
+            $project->slug_title = Project::generate_slug($project->title);
             $project->save();
         }
     }

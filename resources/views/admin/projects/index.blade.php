@@ -34,8 +34,8 @@
                     @foreach ($projects as $project)
                     <tr>
                         <td>
-                            <a class="p-1 my-1 btn btn-dark btn-sm" href="{{route('admin.projects.show', $project->id)}}">Show</a>
-                            <a class="p-1 my-1 btn btn-secondary btn-sm" href="{{route('admin.projects.edit', $project->id)}}">Edit</a>
+                            <a class="p-1 my-1 btn btn-dark btn-sm" href="{{route('admin.projects.show', $project->slug_title)}}">Show</a>
+                            <a class="p-1 my-1 btn btn-secondary btn-sm" href="{{route('admin.projects.edit', $project->slug_title)}}">Edit</a>
 
                             @include('admin.partials.modal')
 

@@ -40,6 +40,10 @@ class ProjectController extends Controller
     {
         $val_data = $request->validated();
 
+        $slug_title = Project::generate_slug($val_data['title']);
+
+        $val_data['slug_title'] = $slug_title;
+
         Project::create($val_data);
 
         return to_route('admin.projects.index');

@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('team')->nullable();
             $table->string('duration')->nullable();
             $table->text('description')->nullable();
+            $table->string('slug_title');
             $table->timestamps();
         });
     }
