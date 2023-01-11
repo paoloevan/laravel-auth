@@ -7,10 +7,13 @@
 
     <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
 
-        <div class="d-flex">
+        <div class="d-flex mb-3">
             <h2>Projects</h2>
 
-            <a class="mx-3 bg-primary text-white btn" href="{{route('admin.projects.create')}}">+</a>
+            <a class="bg-secondary text-white btn btn-sm p-1 ms-5" href="{{route('admin.projects.create')}}">
+                <div>Add new project</div>
+                <div>+</div>
+            </a>
 
         </div>
 
@@ -18,6 +21,7 @@
             <table class="table table-striped table-sm">
                 <thead>
                     <tr>
+                        <th scope="col">Actions</th>
                         <th scope="col">#</th>
                         <th scope="col">Title</th>
                         <th scope="col">Team</th>
@@ -29,13 +33,8 @@
 
                     @foreach ($projects as $project)
                     <tr>
-                        <td>{{$project->id}}</td>
-                        <td>{{$project->title}}</td>
-                        <td>{{$project->team}}</td>
-                        <td>{{$project->duration}}</td>
-                        <td>{{$project->description}}</td>
                         <td>
-                            <a class="p-1 my-1 btn btn-primary btn-sm" href="{{route('admin.projects.show', $project->id)}}">Show</a>
+                            <a class="p-1 my-1 btn btn-dark btn-sm" href="{{route('admin.projects.show', $project->id)}}">Show</a>
                             <a class="p-1 my-1 btn btn-secondary btn-sm" href="{{route('admin.projects.edit', $project->id)}}">Edit</a>
 
 
@@ -71,6 +70,11 @@
                             </div>
 
                         </td>
+                        <td>{{$project->id}}</td>
+                        <td>{{$project->title}}</td>
+                        <td>{{$project->team}}</td>
+                        <td>{{$project->duration}}</td>
+                        <td>{{$project->description}}</td>
                     </tr>
                     @endforeach
 

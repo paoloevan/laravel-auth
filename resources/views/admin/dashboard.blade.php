@@ -95,8 +95,10 @@
         <div class="row">
             @include('admin.partials.navbar')
 
-            <h1 class="text-center m-3">Select the tabel from the left menu</h1>
-
+            <div class="col">
+                <h1 class="text-center">You are logged</h1>
+                <h3 class="text-center m-3">Select the tabel from the left menu</h3>
+            </div>
         </div>
     </div>
 
